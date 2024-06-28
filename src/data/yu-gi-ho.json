@@ -1,0 +1,212 @@
+[
+    {
+        "Nombre": "Dragón Blanco de Ojos Azules",
+        "Tipo": "Dragón",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/1/11/BlueEyesWhiteDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Mago Oscuro",
+        "Tipo": "Mago",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/f/f5/DarkMagician-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Kuriboh",
+        "Tipo": "Demonio",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/5/57/Kuriboh-YSYR-EN-C-1E.png"
+    },
+    {
+        "Nombre": "Dragón Negro de Ojos Rojos",
+        "Tipo": "Dragón",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/c/c7/RedEyesBlackDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Ciber Dragón",
+        "Tipo": "Máquina",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/7/75/CyberDragon-LED3-EN-C-1E.png"
+    },
+    {
+        "Nombre": "Neos, HÉROE Elemental",
+        "Tipo": "Guerrero",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/1/12/ElementalHEROes-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Mago de la Fe",
+        "Tipo": "Lanzador de Conjuros",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/f/f8/MagicianofFaith-SDP-EN-C-1E.png"
+    },
+    {
+        "Nombre": "HÉROE Elemental Burstinatrix",
+        "Tipo": "Guerrero",
+        "Atributo": "Fuego",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/4/4d/ElementalHEROesBurstinatrix-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Dragón de Polvo de Estrellas",
+        "Tipo": "Dragón",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Sincro",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/8/84/StardustDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "HÉROE Elemental Neos Oscuro",
+        "Tipo": "Guerrero",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo de Fusión",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/5/5b/ElementalHEROesDarkNeos-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Caballero del Rey",
+        "Tipo": "Guerrero",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/1/12/KingsKnight-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Caballero de la Reina",
+        "Tipo": "Guerrero",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/6/67/QueensKnight-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Caballero del Joker",
+        "Tipo": "Guerrero",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/9/97/JokerKnight-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Dragón de Polvo de Estrellas",
+        "Tipo": "Dragón",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Sincro",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/8/84/StardustDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Guerrero del Espada Oscura",
+        "Tipo": "Guerrero",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo de Fusión",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/5/5b/DarkPaladin-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Dragón del Juicio",
+        "Tipo": "Dragón",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/3/32/JudgmentDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Mago Oscuro del Caos",
+        "Tipo": "Mago",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Ritual",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/6/61/MagicianofBlackChaos-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Exodia el Prohibido",
+        "Tipo": "Mago",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/a/a4/ExodiaTheForbiddenOne-LED7-EN-C-1E.png"
+    },
+    {
+        "Nombre": "Guerrero de Gaia el Feroz Caballero",
+        "Tipo": "Guerrero",
+        "Atributo": "Tierra",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/3/3b/GaiaTheFierceKnight-SS01-EN-SR-1E.png"
+    },
+    {
+        "Nombre": "Cráneo Convocado",
+        "Tipo": "Demonio",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Normal",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/2/2b/SummonedSkull-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Dragón Alado de Ra",
+        "Tipo": "Dragón",
+        "Atributo": "Divino",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/d/d2/TheWingedDragonofRa-LDK2-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Soldado del Brillo Negro",
+        "Tipo": "Guerrero",
+        "Atributo": "Luz",
+        "Tipo de carta": "Monstruo Ritual",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/0/05/BlackLusterSoldier-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Jinzo",
+        "Tipo": "Máquina",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/8/80/Jinzo-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Dragón de la Rosa Negra",
+        "Tipo": "Dragón",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Sincro",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/9/92/BlackRoseDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "HÉROE Elemental Flame Wingman",
+        "Tipo": "Guerrero",
+        "Atributo": "Viento",
+        "Tipo de carta": "Monstruo de Fusión",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/1/12/ElementalHEROFlameWingman-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Fénix Sagrado de Nephthys",
+        "Tipo": "Bestia Alada",
+        "Atributo": "Fuego",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/a/ae/SacredPhoenixofNephthys-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Neo Espacial Hummingbird Air",
+        "Tipo": "Bestia Alada",
+        "Atributo": "Viento",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/f/f2/NeoSpacianAirHummingbird-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Dragón Negro de Metal Rojo",
+        "Tipo": "Máquina",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo de Fusión",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/2/28/RedEyesBlackMetalDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Dragón Polvoriento",
+        "Tipo": "Dragón",
+        "Atributo": "Oscuridad",
+        "Tipo de carta": "Monstruo Efecto",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/3/32/DustyDragon-LCKC-EN-UR-1E.png"
+    },
+    {
+        "Nombre": "Sable X Uruz",
+        "Tipo": "Bestia Guerrero",
+        "Atributo": "Tierra",
+        "Tipo de carta": "Monstruo Sincro",
+        "Imagen": "https://static.wikia.nocookie.net/yugioh/images/7/7d/XsaberUruz-LCKC-EN-UR-1E.png"
+    }
+]
