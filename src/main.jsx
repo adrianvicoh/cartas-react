@@ -9,14 +9,11 @@ import crearCarta from './crearCarta'
 import editarCarta from './editarCarta'
 import Juegos from './juegos'
 import Noticias from './noticias'
-import adminLista from './adminLista'
+import adminHome from './adminHome'
 import Cartas from './cartas'
-
-
-/*<Route index element={<Llista />} />
-          <Route path="/recepta/:id" element={<Recepta />} />
-          <Route path="/about" element={<About />} />
-          <Route element={<NotFound />} />*/
+import Home from './home.jsx'
+import noticiaContent from './noticiaContent.jsx'
+import Carrito from './carrito.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
@@ -24,7 +21,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          
+          <Route index element={<Home />} />
+          <Route path="/cartas/:id" element={<Cartas />} />
+          <Route path="/juegos/:id" element={<Juegos />} />
+          <Route path="/noticias" element={<Noticias />} />
+          <Route path="/noticias/:id" element={<noticiaContent />} />
+          <Route path="/carro" element={<Carrito />} />
+          <Route element={<NotFound />} />
+        </Route>
+        <Route path="/admin" element={<Admin />}>
+          <Route index element={<adminHome />} />
+          <Route path="/admin/crear" element={<crearCarta />} />
+          <Route path="/admin/editar/:id" element={<editarCarta />} />
         </Route>
       </Routes>
     </BrowserRouter>

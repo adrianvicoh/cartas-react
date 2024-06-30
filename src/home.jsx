@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 
-function adminLista() {
-  
+function Home() {
+
   return (
     <>
-      <p>Admin lista</p>
+      <p>Home</p>
     </>
   )
 }
 
-export default adminLista
+export default Home
