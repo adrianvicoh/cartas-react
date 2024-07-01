@@ -1,5 +1,5 @@
 const APIURL = 'https://app.nocodb.com/api/v2';
-const TOKEN = '4rfGfqNky6ukuBn9NgtrnkC8DPERQjvtknpzizyS';
+const TOKEN = 'ikk2Z7T8PEpFCQAGD8nBagWm7wTlU_xJ7krtCZpV';
 
 class BaseController {
     

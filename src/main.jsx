@@ -1,22 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './app.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import CrearCarta from './CrearCarta.jsx'
-import EditarCarta from './EditarCarta.jsx'
-import Juegos from './Juegos.jsx'
-import Noticias from './Noticias.jsx'
-import AdminHome from './AdminHome.jsx'
-import Cartas from './Cartas.jsx'
-import Home from './Home.jsx'
-import NoticiaContent from './NoticiaContent.jsx'
-import Carrito from './Carrito.jsx'
-import Admin from './Admin.jsx'
-
-/*<Route element={<NotFound />} />*/
+import CrearCarta from './crearCarta.jsx'
+import EditarCarta from './editarCarta.jsx'
+import Juegos from './juegos.jsx'
+import Noticias from './noticias.jsx'
+import AdminHome from './adminHome.jsx'
+import Cartas from './cartas.jsx'
+import Home from './home.jsx'
+import NoticiaContent from './noticiaContent.jsx'
+import Carrito from './carrito.jsx'
+import Admin from './admin.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
