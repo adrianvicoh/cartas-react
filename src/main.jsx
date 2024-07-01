@@ -30,11 +30,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/noticias/:id" element={<NoticiaContent />} />
           <Route path="/carro" element={<Carrito />} />
-        </Route>
-        <Route path="/admin" element={<Admin />}>
-          <Route index element={<AdminHome />} />
-          <Route path="/admin/crear" element={<CrearCarta />} />
-          <Route path="/admin/editar/:id" element={<EditarCarta />} />
+          <Route path="/admin" element={<Admin />}>
+            <Route index element={<AdminHome />} />
+            <Route path="/admin/crear" element={<CrearCarta />} />
+            <Route path="/admin/editar/:id" element={<EditarCarta />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

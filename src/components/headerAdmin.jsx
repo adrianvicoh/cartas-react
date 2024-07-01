@@ -10,8 +10,8 @@ function HeaderAdmin() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Link to="/" className='nav-link'>Lista cartas</Link>
-                            <Link to="/" className='nav-link'>Crear carta</Link>
+                            <Link to="/admin" className='nav-link'>Lista cartas</Link>
+                            <Link to="/admin/crear" className='nav-link'>Crear carta</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

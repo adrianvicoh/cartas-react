@@ -12,8 +12,8 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <NavDropdown title="Juegos" id="basic-nav-dropdown">
-                                <Link to="/juegos" className='dropdown-item'>Yu-Gi-Ho</Link>
-                                <Link to="/" className='dropdown-item'>Pokemon</Link>
+                                <Link to="/juegos/yu-gi-ho" className='dropdown-item'>Yu-Gi-Ho</Link>
+                                <Link to="/juegos/pokemon" className='dropdown-item'>Pokemon</Link>
                             </NavDropdown>
                             <Link to="/noticias" className='nav-link'>Noticias</Link>
                             <Link to="/carro" className='nav-link'>Carrito</Link>
