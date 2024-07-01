@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import { Outlet } from "react-router-dom";
-import headerAdmin from './components/headerAdmin';
+import HeaderAdmin from './components/HeaderAdmin';
 
 function Admin() {
 
     return (
         <>
-            <headerAdmin />
+            <HeaderAdmin />
             <Outlet />
         </>
     )

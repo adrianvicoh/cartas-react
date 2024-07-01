@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-function adminHome() {
+function AdminHome() {
   
   return (
     <>
@@ -10,4 +10,4 @@ function adminHome() {
   )
 }
 
-export default adminHome
+export default AdminHome

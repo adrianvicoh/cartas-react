@@ -12,12 +12,12 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <NavDropdown title="Juegos" id="basic-nav-dropdown">
-                                <Link to="/" className='dropdown-item'>Yu-Gi-Ho</Link>
+                                <Link to="/juegos" className='dropdown-item'>Yu-Gi-Ho</Link>
                                 <Link to="/" className='dropdown-item'>Pokemon</Link>
                             </NavDropdown>
-                            <Link to="/" className='nav-link'>Noticias</Link>
-                            <Link to="/" className='nav-link'>Carrito</Link>
-                            <Link to="/" className='nav-link'>Admin</Link>
+                            <Link to="/noticias" className='nav-link'>Noticias</Link>
+                            <Link to="/carro" className='nav-link'>Carrito</Link>
+                            <Link to="/admin" className='nav-link'>Admin</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

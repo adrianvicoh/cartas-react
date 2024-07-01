@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-function editarCarta() {
+function EditarCarta() {
   
   return (
     <>
@@ -10,4 +10,4 @@ function editarCarta() {
   )
 }
 
-export default editarCarta
+export default EditarCarta

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-function noticiaContent() {
+function NoticiaContent() {
 
   return (
     <>
@@ -10,4 +10,4 @@ function noticiaContent() {
   )
 }
 
-export default noticiaContent
+export default NoticiaContent

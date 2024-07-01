@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
-function headerAdmin() {
+function HeaderAdmin() {
 
     return (
         <>
@@ -20,4 +20,4 @@ function headerAdmin() {
     )
 }
 
-export default headerAdmin
+export default HeaderAdmin
