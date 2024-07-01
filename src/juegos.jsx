@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { useParams } from "react-router-dom";
+import { Container, Row, Col } from 'react-bootstrap';
 import BaseController from './controllers/baseController';
 import CatalogoMuestra from './components/CatalogoMuestra'
-
+import FiltroMarca from './components/FiltroMarca'
 
 function Juegos() {
 
@@ -23,7 +24,7 @@ function Juegos() {
   useEffect(() => {
 
     async function getAllReceptes() {
-      const cartasController = new BaseController(tablename, tableId);
+      const cartasController = new BaseController(tableId, tableName);
       const cartasData = await cartasController.getAll();
       if (cartasData.length) {
         setCartas(cartasData);
@@ -36,10 +37,22 @@ function Juegos() {
 
   }, [])
 
+  if (cartas.length == 0) {
+    return (
+      <>
+        <h1>No hay cartas</h1>
+      </>
+    )
+  }
+
   return (
     <>
-      <p>Juegos</p>
-      <p>{id}</p>
+      <Container>
+        <Row>
+          <Col xs={3}><FiltroMarca /></Col>
+          <Col xs={9}><CatalogoMuestra cartasContent={cartas}/></Col>
+        </Row>
+      </Container>
     </>
   )
 }

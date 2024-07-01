@@ -2,14 +2,14 @@ const APIURL = 'https://app.nocodb.com/api/v2';
 const TOKEN = 'ikk2Z7T8PEpFCQAGD8nBagWm7wTlU_xJ7krtCZpV';
 
 class BaseController {
-    
+
     constructor(tableId, tableName) {
         this.apiUrl = `${APIURL}/tables/${tableId}/records`;
         this.token = TOKEN;
         this.tableName = tableName;
     }
 
-    async getTableName(){
+    async getTableName() {
         return this.tableName;
     }
 
@@ -23,8 +23,18 @@ class BaseController {
         });
 
         //retornem directament la propietat list que conté els registres
-        const data = await response.json();
-        return data.list;
+        let data = await response.json();
+        data = data.list
+
+        // extraient la Imagen, només agafem la primera
+        data = data.map(e => {
+            let Imagen = (e.Imagen && e.Imagen[0].signedUrl) ? e.Imagen[0].signedUrl : '';
+            delete e.Imagen;
+            e.Imagen = Imagen;
+            return e;
+        });
+
+        return data;
 
     }
 
