@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { useEffect, useState } from 'react'
+import MuestraCarta from "./MuestraCarta";
 
 function CatalogoMuestra(props) {
 
@@ -14,9 +15,7 @@ function CatalogoMuestra(props) {
             <Row>
                 {cartas.map(carta => (
                     <Col xs={6}>
-                        <div className="p-2">
-                            <Col xs={6}><Image src={carta.Imagen} thumbnail /></Col>
-                        </div>
+                        <MuestraCarta carta={carta} />
                     </Col>
                 ))}
             </Row>
