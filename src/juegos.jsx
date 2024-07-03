@@ -22,7 +22,7 @@ function Juegos() {
 
   useEffect(() => {
 
-    async function getAllReceptes() {
+    async function getAllCartas() {
       const cartasController = new BaseController(tableId, tableName);
       const cartasData = await cartasController.getAll();
       if (cartasData.length) {
@@ -32,7 +32,7 @@ function Juegos() {
       }
     }
 
-    getAllReceptes();
+    getAllCartas();
 
   }, [cartas])
 
