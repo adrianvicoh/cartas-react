@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
 import BaseController from './controllers/baseController';
@@ -35,7 +34,7 @@ function Juegos() {
 
     getAllReceptes();
 
-  }, [])
+  }, [cartas])
 
   if (cartas.length == 0) {
     return (
@@ -50,7 +49,7 @@ function Juegos() {
       <Container>
         <Row>
           <Col xs={3}><FiltroMarca /></Col>
-          <Col xs={9}><CatalogoMuestra cartasContent={cartas}/></Col>
+          <Col xs={9}><CatalogoMuestra cartasContent={cartas} juegoId={id}/></Col>
         </Row>
       </Container>
     </>

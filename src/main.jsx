@@ -18,12 +18,12 @@ import Admin from './admin.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <React.StrictMode>
+  <React.StrictMode>  
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="/cartas/:id" element={<Cartas />} />
+          <Route path="/cartas/:juego/:id" element={<Cartas />} />
           <Route path="/juegos/:id" element={<Juegos />} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/noticias/:id" element={<NoticiaContent />} />
