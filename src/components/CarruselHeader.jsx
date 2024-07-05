@@ -1,19 +1,19 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
-function CarruselHeader({ noticias }) {
+function CarruselHeader({ images }) {
   return (
     <Carousel>
-      {noticias.map((noticia, index) => (
+      {images.map((image, index) => (
         <Carousel.Item key={index}>
           <img
             className="d-block w-100"
-            src={noticia.Imagen} 
+            src={image.Imagen} 
             alt={`Slide ${index}`}
           />
           <Carousel.Caption>
-            <h3>{noticia.Titulo}</h3> 
-            <p>{noticia.description}</p> 
+            <h3>{image.Titulo}</h3> 
+            <p>{image.description}</p> 
           </Carousel.Caption>
         </Carousel.Item>
       ))}

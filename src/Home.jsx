@@ -7,7 +7,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 function Home() {
   const [noticias, setNoticias] = useState([]);
-  const tableName = 'your_table_name';
+  const tableName = 'Noticias'; 
 
   useEffect(() => {
     async function getAllNoticias() {
@@ -22,15 +22,31 @@ function Home() {
     getAllNoticias();
   }, []);
 
+  const [yugioh, setYugioh] = useState([]);
+  const tableNames = 'Yu-Hi-Oh'; 
+
+  useEffect(() => {
+    async function getAllNoticias() {
+      const yugiohController = new BaseController('mna1v9pmt69h5rd', tableNames);
+      const yugiohData = await yugiohController.getAll();
+      if (yugiohData.length) {
+        setNoticias(yugiohData);
+      } else {
+        console.log('No data found:', yugiohData);
+      }
+    }
+    getAllNoticias();
+  }, []);
+
   return (
     <>
     <Container>
     <p>Home</p>
       <Row>
-        <CarruselHeader noticias={noticias} />
+        <CarruselHeader images={noticias} />
       </Row>
       <Row>
-        <CarruselMarca noticias={noticias} />
+        <CarruselMarca images={yugioh} />
       </Row>
     </Container>
     </>
