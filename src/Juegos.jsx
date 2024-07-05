@@ -34,7 +34,7 @@ function Juegos() {
 
     getAllCartas();
 
-  }, [cartas])
+  }, [])
 
   if (cartas.length == 0) {
     return (
@@ -49,7 +49,7 @@ function Juegos() {
       <Container>
         <Row>
           <Col xs={3}><FiltroMarca /></Col>
-          <Col xs={9}><CatalogoMuestra cartasContent={cartas} juegoId={id}/></Col>
+          <Col xs={9}><CatalogoMuestra cartasContent={cartas} juegoId={id} /></Col>
         </Row>
       </Container>
     </>
