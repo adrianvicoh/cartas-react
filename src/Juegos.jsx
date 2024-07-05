@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
-import BaseController from './controllers/baseController';
+import BaseController from './controllers/BaseController';
 import CatalogoMuestra from './components/CatalogoMuestra'
 import FiltroMarca from './components/FiltroMarca'
 

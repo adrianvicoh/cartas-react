@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import CarruselHeader from './components/CarruselHeader';
 import CarruselMarca from './components/CarruselMarca';
-import BaseController from './controllers/baseController';
+import BaseController from './controllers/BaseController';
 import { Container, Row, Col } from 'react-bootstrap';
 
 function Home() {
   const [noticias, setNoticias] = useState([]);
-  const tableName = 'your_table_name'; 
+  const tableName = 'your_table_name';
 
   useEffect(() => {
     async function getAllNoticias() {
