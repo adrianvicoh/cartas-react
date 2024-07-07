@@ -13,7 +13,7 @@ function CatalogoMuestra(props) {
             <p>Catalogo muestra</p>
             <Row>
                 {cartas.map(carta => (
-                    <Col xs={6}>
+                    <Col key={carta.Id} xs={6}>
                         <MuestraCarta carta={carta} juegoId={juegoId}/>
                     </Col>
                 ))}

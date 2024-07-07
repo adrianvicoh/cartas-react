@@ -1,0 +1,5 @@
+img.imgAdmin {
+    min-height: 150px;
+    min-width: 100px;
+    object-fit: cover;
+}
