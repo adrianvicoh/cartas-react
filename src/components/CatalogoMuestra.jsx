@@ -8,8 +8,6 @@ function CatalogoMuestra(props) {
     let cartas = props.cartasContent;
     let juegoId = props.juegoId;
 
-    console.log(cartas)
-
     return (
         <>
             <p>Catalogo muestra</p>

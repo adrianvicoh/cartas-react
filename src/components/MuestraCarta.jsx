@@ -12,7 +12,7 @@ function MuestraCarta(props) {
             <div className="muestraGeneral m-3 p-3 bg-success-subtle rounded">
                 <Row>
                     <Col lg={4}>
-                        <Link to={"/carta/" + carta.Id} >
+                        <Link to={"/cartas/" + juegoId + "/" + carta.Id} >
                             <Image src={carta.Imagen} className="imgMuestra" thumbnail />
                         </Link>
                     </Col>

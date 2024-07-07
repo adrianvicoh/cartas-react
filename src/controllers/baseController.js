@@ -78,6 +78,11 @@ class BaseController {
         });
 
         const data = await response.json();
+
+        let Imagen = (data.Imagen && data.Imagen[0].signedUrl) ? data.Imagen[0].signedUrl : '';
+        delete data.Imagen;
+        data.Imagen = Imagen;
+
         return data;
     }
 
