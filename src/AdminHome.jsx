@@ -4,14 +4,14 @@ import './App.css'
 
 function AdminHome() {
 
-  const [cartas, setCartas] = useState([]);
+  const [cartas, setCartas] = useState([{}]);
 
   const tablas = ['mna1v9pmt69h5rd', 'mu0huocera3el49']
 
   async function addCartas(tabla) {
     let cartasController = new BaseController(tabla, "tableName");
     let cartasData = await cartasController.getAll();
-    if (cartasData.length) {
+    if (cartasData) {
       cartasData.map(carta => {
         carta.tabla = tabla
         setCartas(cartas.push(carta));
