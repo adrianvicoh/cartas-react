@@ -1,35 +1,38 @@
 import { useEffect, useState } from 'react'
 import BaseController from './controllers/BaseController';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import './App.css'
+import CartaEdicion from './components/CartaEdicion.jsx'
 
 function AdminHome() {
 
   const [cartas, setCartas] = useState([{}]);
-
-  const tablas = ['mna1v9pmt69h5rd', 'mu0huocera3el49']
-
-  async function addCartas(tabla) {
-    let cartasController = new BaseController(tabla, "tableName");
-    let cartasData = await cartasController.getAll();
-    if (cartasData) {
-      cartasData.map(carta => {
-        carta.tabla = tabla
-        setCartas(cartas.push(carta));
-      })
-    } else {
-      console.log(cartasData)
-    }
-  }
+  const [juego, setJuego] = useState("yu-gi-ho");
+  let tableId, tableName;
 
   useEffect(() => {
 
+    if (juego === 'yu-gi-ho') {
+      tableId = 'mna1v9pmt69h5rd'
+      tableName = "yugiho"
+    } else {
+      tableId = 'mu0huocera3el49'
+      tableName = "pokemon"
+    }
+
     async function getAllCartas() {
-      tablas.map(addCartas)
+      const cartasController = new BaseController(tableId, tableName);
+      const cartasData = await cartasController.getAll();
+      if (cartasData.length) {
+        setCartas(cartasData);
+      } else {
+        console.log(cartasData)
+      }
     }
 
     getAllCartas();
 
-  }, [])
+  }, [juego])
 
   if (cartas.length == 0) {
     return (
@@ -41,8 +44,19 @@ function AdminHome() {
 
   return (
     <>
-      <p>Admin Home</p>
-      {console.log(cartas)}
+      <Container>
+        <Row>
+          <div class="d-grid gap-2 d-md-block">
+            <Button className="btn btn-primary m-3" onClick={() => setJuego('yu-gi-ho')}>Yu-Gi-Ho</Button>
+            <Button className="btn btn-primary m-3" onClick={() => setJuego('pokemon')}>Pokémon</Button>
+          </div>
+        </Row>
+        <Row>
+          {cartas.map(carta => {
+            <CartaEdicion carta={carta} idTabla={juego}/>
+          })}
+        </Row>
+      </Container>
     </>
   )
 }
