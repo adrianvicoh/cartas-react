@@ -34,7 +34,7 @@ function Juegos() {
 
     getAllCartas();
 
-  }, [])
+  }, [id])
 
   if (cartas.length == 0) {
     return (

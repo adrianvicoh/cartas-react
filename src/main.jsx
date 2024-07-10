@@ -31,7 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/admin" element={<Admin />}>
             <Route index element={<AdminHome />} />
             <Route path="/admin/crear" element={<CrearCarta />} />
-            <Route path="/admin/editar/:id" element={<EditarCarta />} />
+            <Route path="/admin/editar/:juego/:id" element={<EditarCarta />} />
           </Route>
         </Route>
       </Routes>

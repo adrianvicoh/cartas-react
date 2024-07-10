@@ -1,20 +1,39 @@
 import { useEffect, useState } from 'react'
 import BaseController from '../controllers/BaseController';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import './CartaEdicion.css'
 
 function CartaEdicion(props) {
 
     const carta = props.carta;
-    const idTabla = props.idTabla;
+    const juego = props.juego;
+    let tableId, tableName;
+
+    if (juego === 'yu-gi-ho') {
+        tableId = 'mna1v9pmt69h5rd'
+        tableName = "yugiho"
+    } else {
+        tableId = 'mu0huocera3el49'
+        tableName = "pokemon"
+    }
+
+    async function deleteCarta(idCarta) {
+        /*const cartasController = new BaseController(tableId, tableName);
+        const response = await cartasController.deleteItem(idCarta);*/
+        console.log("A eliminar: " + idCarta)
+    }
 
     return (
         <>
             <Col xs={3}>
-                <div className="m-2">
-                    <Image src={carta.Imagen} className="imgMuestra" thumbnail />
-                    <Link to='' className='btn btn-primary'>Editar</Link>
-                    <Link to='' className='btn btn-danger'>Eliminar</Link>
+                <div className="m-3 text-center">
+                    <Image src={carta.Imagen} className="imgEdicion" thumbnail />
+                    <div className="m-2">
+                        <Link to={'/admin/editar/' + juego + '/' + carta.Id} className="btn btn-primary w-10">Editar</Link>{' '}
+                        {/* <Link to='' className="btn btn-danger w-10">Eliminar</Link>{' '} */}
+                        <Button className="btn btn-danger w-10" onClick={() => deleteCarta(carta.Id)}>Eliminar</Button>
+                    </div>
                 </div>
             </Col>
         </>

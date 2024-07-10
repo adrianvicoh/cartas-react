@@ -20,8 +20,9 @@ function AdminHome() {
       tableName = "pokemon"
     }
 
+    const cartasController = new BaseController(tableId, tableName);
+
     async function getAllCartas() {
-      const cartasController = new BaseController(tableId, tableName);
       const cartasData = await cartasController.getAll();
       if (cartasData.length) {
         setCartas(cartasData);
@@ -46,15 +47,16 @@ function AdminHome() {
     <>
       <Container>
         <Row>
-          <div class="d-grid gap-2 d-md-block">
+          <div className="d-grid gap-2 d-md-block">
             <Button className="btn btn-primary m-3" onClick={() => setJuego('yu-gi-ho')}>Yu-Gi-Ho</Button>
             <Button className="btn btn-primary m-3" onClick={() => setJuego('pokemon')}>Pokémon</Button>
           </div>
         </Row>
         <Row>
-          {cartas.map(carta => {
-            <CartaEdicion carta={carta} idTabla={juego}/>
-          })}
+          {cartas.map((carta,idx) => (
+            // <CartaEdicion carta={carta} idTabla={juego} deleteCarta={() => deleteCarta()} />
+              <CartaEdicion key={idx} carta={carta} juego={juego} />
+          ))}
         </Row>
       </Container>
     </>
