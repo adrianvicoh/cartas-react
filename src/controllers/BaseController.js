@@ -67,7 +67,6 @@ class BaseController {
         return data;
     }
 
-
     async getItemById(id) {
         const response = await fetch(`${this.apiUrl}/${id}`, {
             method: 'GET',
@@ -106,6 +105,5 @@ class BaseController {
         return data;
     }
 }
-
 
 export default BaseController;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
-import BaseController from './controllers/baseController';
+import BaseController from './controllers/BaseController';
 import CartaInfo from './components/CartaInfo';
 
 function Cartas() {
@@ -43,8 +43,12 @@ function Cartas() {
 
   return (
     <>
-      <p>Cartas</p>
-      <CartaInfo carta={carta} />
+      <Container>
+        <Row>
+          <p>Cartas</p>
+          <CartaInfo carta={carta} juego={juego} />
+        </Row>
+      </Container>
     </>
   )
 }
