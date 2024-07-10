@@ -10,12 +10,18 @@ function Juegos() {
   const { id } = useParams()
   let tableId, tableName;
 
-  if (id === 'yu-gi-ho') {
+  if (id === 'Yu-Gi-Ho') {
     tableId = 'mna1v9pmt69h5rd'
     tableName = "yugiho"
-  } else {
+  } else if(id === 'Pokemon'){
     tableId = 'mu0huocera3el49'
     tableName = "pokemon"
+  } else if(id === 'Magic:The Gathering'){
+    tableId = 'mwfhammpc10rp9k'
+    tableName = 'Magic'
+  } else if(id === 'Dragon Ball'){
+    tableId = 'mwwmrnif2aa0wff'
+    tableName = 'Dragon'
   }
 
   const [cartas, setCartas] = useState([]);

@@ -12,7 +12,6 @@ function CarruselHeader({ images }) {
             alt={`Slide ${index}`}
           />
           <Carousel.Caption>
-            <h3>{image.Titulo}</h3> 
             <p>{image.description}</p> 
           </Carousel.Caption>
         </Carousel.Item>

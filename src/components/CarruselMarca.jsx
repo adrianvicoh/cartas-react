@@ -6,13 +6,13 @@ import styled from 'styled-components';
 const ProductImage = styled.img`
   width: 100%;
   height: auto;
-  max-height: 50px; /* Ajusta la altura máxima de la imagen */
+  max-height: 190px; /* Ajusta la altura máxima de la imagen */
 `;
 
 const ProductCard = styled.div`
-  padding: 10px;
+  padding: 50px
   text-align: center;
-  max-width: 75px; /* Ajusta el ancho máximo del contenedor */
+  max-width: 130px; /* Ajusta el ancho máximo del contenedor */
   margin: auto; /* Centra el contenedor */
   box-sizing: border-box;
 `;
@@ -22,18 +22,18 @@ const ProductTitle = styled.h3`
 `;
 
 const ProductDescription = styled.p`
-  font-size: 12px; /* Ajusta el tamaño del texto de la descripción */
+  font-size: 12px; /* Ajusta el tamaño del texto del precio */
 `;
 
 const CarruselMarca = ({ images }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 4
+      items: 5
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 5
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -50,19 +50,19 @@ const CarruselMarca = ({ images }) => {
       responsive={responsive} 
       infinite={true} 
       autoPlay={true} 
-      autoPlaySpeed={3000}
+      autoPlaySpeed={9000}
       swipeable={true}
       draggable={true}
-      slidesToSlide={4} // Desliza 4 productos a la vez
+      slidesToSlide={5} 
     >
       {images.map((image, index) => (
         <ProductCard key={index}>
           <ProductImage
-            src={image.mna1v9pmt69h5rd}
+            src={image.Imagen}
             alt={`Product ${index}`}
           />
-          <ProductTitle>{image.Titulo}</ProductTitle>
-          <ProductDescription>{image.Description}</ProductDescription>
+          <ProductTitle>{image.Nombre}</ProductTitle>
+          <ProductDescription>{image.precio}</ProductDescription>
         </ProductCard>
       ))}
     </Carousel>
