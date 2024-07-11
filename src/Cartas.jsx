@@ -11,12 +11,18 @@ function Cartas() {
 
   let tableId, tableName;
 
-  if (juegoId === 'yu-gi-ho') {
+  if (id === 'yu-gi-ho') {
     tableId = 'mna1v9pmt69h5rd'
     tableName = "yugiho"
-  } else {
+  } else if (id === 'pokemon'){
     tableId = 'mu0huocera3el49'
     tableName = "pokemon"
+  } else if (id === 'magic'){
+    tableId = 'mwfhammpc10rp9k'
+    tableName = "magic"
+  } else if (id === 'dragonball'){
+    tableId = 'mwwmrnif2aa0wff'
+    tableName = "dragonball"
   }
 
   const [carta, setCarta] = useState([]);

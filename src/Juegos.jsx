@@ -13,15 +13,15 @@ function Juegos() {
   if (id === 'Yu-Gi-Ho') {
     tableId = 'mna1v9pmt69h5rd'
     tableName = "yugiho"
-  } else if(id === 'Pokemon'){
+  } else if (id === 'pokemon'){
     tableId = 'mu0huocera3el49'
     tableName = "pokemon"
-  } else if(id === 'Magic:The Gathering'){
+  } else if (id === 'magic'){
     tableId = 'mwfhammpc10rp9k'
-    tableName = 'Magic'
-  } else if(id === 'Dragon Ball'){
+    tableName = "magic"
+  } else if (id === 'dragonball'){
     tableId = 'mwwmrnif2aa0wff'
-    tableName = 'Dragon'
+    tableName = "dragonball"
   }
 
   const [cartas, setCartas] = useState([]);
@@ -40,7 +40,7 @@ function Juegos() {
 
     getAllCartas();
 
-  }, [])
+  }, [id])
 
   if (cartas.length == 0) {
     return (
