@@ -13,10 +13,16 @@ function CartaEdicion(props) {
     if (juego === 'yu-gi-ho') {
         tableId = 'mna1v9pmt69h5rd'
         tableName = "yugiho"
-    } else {
+      } else if (juego === 'pokemon'){
         tableId = 'mu0huocera3el49'
         tableName = "pokemon"
-    }
+      } else if (juego === 'magic'){
+        tableId = 'mwfhammpc10rp9k'
+        tableName = "magic"
+      } else if (juego === 'dragonball'){
+        tableId = 'mwwmrnif2aa0wff'
+        tableName = "dragonball"
+      }
 
     async function deleteCarta(idCarta) {
         /*const cartasController = new BaseController(tableId, tableName);

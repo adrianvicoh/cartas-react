@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import BaseController from './controllers/BaseController';
+import BaseController from './controllers/BaseController.js';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import './App.css'
 import CartaEdicion from './components/CartaEdicion.jsx'
@@ -15,9 +15,15 @@ function AdminHome() {
     if (juego === 'yu-gi-ho') {
       tableId = 'mna1v9pmt69h5rd'
       tableName = "yugiho"
-    } else {
+    } else if (juego === 'pokemon'){
       tableId = 'mu0huocera3el49'
       tableName = "pokemon"
+    } else if (juego === 'magic'){
+      tableId = 'mwfhammpc10rp9k'
+      tableName = "magic"
+    } else if (juego === 'dragonball'){
+      tableId = 'mwwmrnif2aa0wff'
+      tableName = "dragonball"
     }
 
     const cartasController = new BaseController(tableId, tableName);
@@ -50,6 +56,8 @@ function AdminHome() {
           <div className="d-grid gap-2 d-md-block">
             <Button className="btn btn-primary m-3" onClick={() => setJuego('yu-gi-ho')}>Yu-Gi-Ho</Button>
             <Button className="btn btn-primary m-3" onClick={() => setJuego('pokemon')}>Pokémon</Button>
+            <Button className="btn btn-primary m-3" onClick={() => setJuego('magic')}>Magic</Button>
+            <Button className="btn btn-primary m-3" onClick={() => setJuego('dragonball')}>Dragon Ball</Button>
           </div>
         </Row>
         <Row>

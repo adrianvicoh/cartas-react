@@ -15,10 +15,16 @@ function EditarCarta() {
 
   if (juego === 'yu-gi-ho') {
     tableId = 'mna1v9pmt69h5rd'
-    tableName = "Yu-Gi-Ho"
-  } else {
+    tableName = "yugiho"
+  } else if (juego === 'pokemon'){
     tableId = 'mu0huocera3el49'
-    tableName = "Pokémon"
+    tableName = "pokemon"
+  } else if (juego === 'magic'){
+    tableId = 'mwfhammpc10rp9k'
+    tableName = "magic"
+  } else if (juego === 'dragonball'){
+    tableId = 'mwwmrnif2aa0wff'
+    tableName = "dragonball"
   }
 
   useEffect(() => {
@@ -86,7 +92,7 @@ function EditarCarta() {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Descripción</Form.Label>
-                <Form.Control placeholder="Descripción" defaultValue={carta.Descripción} />
+                <Form.Control placeholder="Descripción" type="textarea" defaultValue={carta.Descripción} />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Disabled select menu</Form.Label>
