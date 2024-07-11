@@ -67,7 +67,6 @@ class BaseController {
         return data;
     }
 
-
     async getItemById(id) {
         const response = await fetch(`${this.apiUrl}/${id}`, {
             method: 'GET',
@@ -79,9 +78,13 @@ class BaseController {
 
         const data = await response.json();
 
-        let Imagen = (data.Imagen && data.Imagen[0].signedUrl) ? data.Imagen[0].signedUrl : '';
-        delete data.Imagen;
-        data.Imagen = Imagen;
+        console.log("bdd",data)
+
+        // extraient la Imagen, només agafem la primera
+        
+            let Imagen = (data.Imagen && data.Imagen[0].signedUrl) ? data.Imagen[0].signedUrl : '';
+            delete data.Imagen;
+            data.Imagen = Imagen;
 
         return data;
     }
@@ -102,6 +105,5 @@ class BaseController {
         return data;
     }
 }
-
 
 export default BaseController;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
 import BaseController from './controllers/BaseController';
-import InfoCarta from './components/InfoCarta';
+import CartaInfo from './components/CartaInfo';
 
 function Cartas() {
 
@@ -39,9 +39,12 @@ function Cartas() {
 
   return (
     <>
-    <Container>
-      <InfoCarta carta={carta} juegoId={juegoId}/>
-    </Container>
+      <Container>
+        <Row>
+          <p>Cartas</p>
+          <CartaInfo carta={carta} juego={juego} />
+        </Row>
+      </Container>
     </>
   )
 }
