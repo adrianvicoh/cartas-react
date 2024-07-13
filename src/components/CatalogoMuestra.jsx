@@ -6,7 +6,7 @@ import MuestraCarta from "./MuestraCarta";
 function CatalogoMuestra(props) {
 
     let cartas = props.cartasContent;
-    let juegoId = props.juegoId;
+    let juego = props.juego;
 
     return (
         <>
@@ -14,7 +14,7 @@ function CatalogoMuestra(props) {
             <Row>
                 {cartas.map(carta => (
                     <Col key={carta.Id} xs={6}>
-                        <MuestraCarta carta={carta} juegoId={juegoId}/>
+                        <MuestraCarta carta={carta} juego={juego}/>
                     </Col>
                 ))}
             </Row>

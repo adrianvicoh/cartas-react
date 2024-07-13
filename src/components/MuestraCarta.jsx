@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function MuestraCarta(props) {
 
     const carta = props.carta;
-    const juegoId = props.juegoId;
+    const juego = props.juego;
 
     // const cartaString = JSON.stringify(carta)
 
@@ -15,7 +15,7 @@ function MuestraCarta(props) {
                 <Row>
                     <Col lg={4}>
                         {/* <Link to={"/cartas/" + cartaString} > */}
-                        <Link to={"/cartas/" + juegoId + "/" + carta.Id} >
+                        <Link to={"/cartas/" + juego + "/" + carta.Id} >
                             <Image src={carta.Imagen} className="imgMuestra" thumbnail />
                         </Link>
                     </Col>

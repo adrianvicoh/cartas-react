@@ -7,20 +7,20 @@ import CartaInfo from './components/CartaInfo';
 function Cartas() {
 
   const { id } = useParams()
-  const { juegoId } = useParams()
+  const { juego } = useParams()
 
   let tableId, tableName;
 
-  if (id === 'yu-gi-ho') {
+  if (juego === 'yu-gi-ho') {
     tableId = 'mna1v9pmt69h5rd'
     tableName = "yugiho"
-  } else if (id === 'pokemon'){
+  } else if (juego === 'pokemon'){
     tableId = 'mu0huocera3el49'
     tableName = "pokemon"
-  } else if (id === 'magic'){
+  } else if (juego === 'magic'){
     tableId = 'mwfhammpc10rp9k'
     tableName = "magic"
-  } else if (id === 'dragonball'){
+  } else if (juego === 'dragonball'){
     tableId = 'mwwmrnif2aa0wff'
     tableName = "dragonball"
   }

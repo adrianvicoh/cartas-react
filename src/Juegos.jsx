@@ -10,23 +10,23 @@ function Juegos() {
   const { id } = useParams()
   let tableId, tableName;
 
-  if (id === 'Yu-Gi-Ho') {
-    tableId = 'mna1v9pmt69h5rd'
-    tableName = "yugiho"
-  } else if (id === 'pokemon'){
-    tableId = 'mu0huocera3el49'
-    tableName = "pokemon"
-  } else if (id === 'magic'){
-    tableId = 'mwfhammpc10rp9k'
-    tableName = "magic"
-  } else if (id === 'dragonball'){
-    tableId = 'mwwmrnif2aa0wff'
-    tableName = "dragonball"
-  }
-
   const [cartas, setCartas] = useState([]);
 
   useEffect(() => {
+
+    if (id === 'yu-gi-ho') {
+      tableId = 'mna1v9pmt69h5rd'
+      tableName = "yugiho"
+    } else if (id === 'pokemon'){
+      tableId = 'mu0huocera3el49'
+      tableName = "pokemon"
+    } else if (id === 'magic'){
+      tableId = 'mwfhammpc10rp9k'
+      tableName = "magic"
+    } else if (id === 'dragonball'){
+      tableId = 'mwwmrnif2aa0wff'
+      tableName = "dragonball"
+    }
 
     async function getAllCartas() {
       const cartasController = new BaseController(tableId, tableName);
@@ -55,7 +55,7 @@ function Juegos() {
       <Container>
         <Row>
           <Col xs={3}><FiltroMarca /></Col>
-          <Col xs={9}><CatalogoMuestra cartasContent={cartas} juegoId={id} /></Col>
+          <Col xs={9}><CatalogoMuestra cartasContent={cartas} juego={id} /></Col>
         </Row>
       </Container>
     </>
