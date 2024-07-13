@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import BaseController from './controllers/BaseController.js';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import './App.css'
+import './AdminHome.css'
 import CartaEdicion from './components/CartaEdicion.jsx'
 
 function AdminHome() {
@@ -53,11 +53,11 @@ function AdminHome() {
     <>
       <Container>
         <Row>
-          <div className="d-grid gap-2 d-md-block">
-            <Button className="btn btn-primary m-3" onClick={() => setJuego('yu-gi-ho')}>Yu-Gi-Ho</Button>
-            <Button className="btn btn-primary m-3" onClick={() => setJuego('pokemon')}>Pokémon</Button>
-            <Button className="btn btn-primary m-3" onClick={() => setJuego('magic')}>Magic</Button>
-            <Button className="btn btn-primary m-3" onClick={() => setJuego('dragonball')}>Dragon Ball</Button>
+          <div className="estiloNavbar mb-2">
+            <Button className="btn btn-light m-3" onClick={() => setJuego('yu-gi-ho')}>Yu-Gi-Ho</Button>
+            <Button className="btn btn-light m-3" onClick={() => setJuego('pokemon')}>Pokémon</Button>
+            <Button className="btn btn-light m-3" onClick={() => setJuego('magic')}>Magic</Button>
+            <Button className="btn btn-light m-3" onClick={() => setJuego('dragonball')}>Dragon Ball</Button>
           </div>
         </Row>
         <Row>

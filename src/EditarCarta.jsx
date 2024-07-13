@@ -52,8 +52,6 @@ function EditarCarta() {
     )
   }
 
-  console.log(carta)
-
   return (
     <>
       <Container>
