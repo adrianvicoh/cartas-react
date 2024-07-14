@@ -52,61 +52,89 @@ function EditarCarta() {
     )
   }
 
- 
+  function headerForm() {
+    return (
+      <>
+        <Row>
+          <h1>{"Editar ID #" + carta.Id}</h1>
+          <h6 className='mb-3'>Juego: {tableName}</h6>
+        </Row>
+      </>
+    )
+  }
+
+  function baseForm() {
+    return (
+      <>
+        <Col xs={6}>
+          <Form.Group className="mb-3">
+            <Form.Label>Imagen</Form.Label><br />
+            <Image src={carta.Imagen} className="imgEdicion mb-3" thumbnail />
+            <Form.Control type="file" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Nombre</Form.Label>
+            <Form.Control placeholder="Nombre" defaultValue={carta.Nombre} />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Precio</Form.Label>
+            <Form.Control placeholder="Precio" defaultValue={carta.precio} />
+          </Form.Group>
+        </Col>
+      </>
+    )
+  }
+
+  if (juego === 'yu-gi-ho') {
+    return (
+      <>
+        <Container>
+          <div className='m-4 text-light'>
+            {headerForm()}
+            <Row>
+              {baseForm()}
+              <Col xs={6}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Tipo</Form.Label>
+                  <Form.Control placeholder="Tipo" defaultValue={carta.Tipo} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Atributo</Form.Label>
+                  <Form.Control placeholder="Atributo" defaultValue={carta.Atributo} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Tipo de carta</Form.Label>
+                  <Form.Control placeholder="Tipo de carta" defaultValue={carta.TipoDeCarta} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Ataque</Form.Label>
+                  <Form.Control placeholder="Ataque" defaultValue={carta.ATK} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Defensa</Form.Label>
+                  <Form.Control placeholder="Defensa" defaultValue={carta.DEF} />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                  <Form.Label>Descripción</Form.Label>
+                  <Form.Control placeholder="Descripción" type="textarea" defaultValue={carta.Descripción} />
+                </Form.Group>
+              </Col>
+            </Row>
+          </div>
+        </Container>
+      </>
+    )
+  } else if(juego === 'pokemon') {
+
+  } else if(juego === 'magic') {
+
+  } else if(juego === 'dragonball') {
+
+  }
 
   return (
     <>
-      <Container>
-        <div className='m-4 text-light'>
-          <Row>
-            <h1>{"Editar ID #" + carta.Id}</h1>
-            <h6 className='mb-3'>Juego: {tableName}</h6>
-          </Row>
-          <Row>
-            <Col xs={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Imagen</Form.Label><br />
-                <Image src={carta.Imagen} className="imgEdicion mb-3" thumbnail />
-                <Form.Control type="file" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Nombre</Form.Label>
-                <Form.Control placeholder="Nombre" defaultValue={carta.Nombre} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Precio</Form.Label>
-                <Form.Control placeholder="Precio" defaultValue={carta.precio} />
-              </Form.Group>
-            </Col>
-            <Col xs={6}>
-              <Form.Group className="mb-3">
-                <Form.Label>Tipo</Form.Label>
-                <Form.Control placeholder="Tipo" defaultValue={carta.Tipo} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Atributo</Form.Label>
-                <Form.Control placeholder="Atributo" defaultValue={carta.Atributo} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Tipo de carta</Form.Label>
-                <Form.Control placeholder="Tipo de carta" defaultValue={carta.TipoDeCarta} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Ataque</Form.Label>
-                <Form.Control placeholder="Ataque" defaultValue={carta.ATK} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Defensa</Form.Label>
-                <Form.Control placeholder="Defensa" defaultValue={carta.DEF} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Descripción</Form.Label>
-                <Form.Control placeholder="Descripción" type="textarea" defaultValue={carta.Descripción} />
-              </Form.Group>
-            </Col>
-          </Row>
-        </div>
-      </Container>
+
     </>
   )
 }
