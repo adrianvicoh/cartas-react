@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import './App.css'
 import BaseController from './controllers/BaseController';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Container, Row, Col, Form, Image } from 'react-bootstrap';
 
 function EditarCarta() {
 
@@ -15,16 +15,16 @@ function EditarCarta() {
 
   if (juego === 'yu-gi-ho') {
     tableId = 'mna1v9pmt69h5rd'
-    tableName = "yugiho"
-  } else if (juego === 'pokemon'){
+    tableName = "Yu-Gi-Ho"
+  } else if (juego === 'pokemon') {
     tableId = 'mu0huocera3el49'
-    tableName = "pokemon"
-  } else if (juego === 'magic'){
+    tableName = "Pokémon"
+  } else if (juego === 'magic') {
     tableId = 'mwfhammpc10rp9k'
-    tableName = "magic"
-  } else if (juego === 'dragonball'){
+    tableName = "Magic: The Gathering"
+  } else if (juego === 'dragonball') {
     tableId = 'mwwmrnif2aa0wff'
-    tableName = "dragonball"
+    tableName = "Dragon Ball"
   }
 
   useEffect(() => {
@@ -52,33 +52,44 @@ function EditarCarta() {
     )
   }
 
+ 
+
   return (
     <>
       <Container>
-        <Row>
-          <Col xs={6}>
-            <div className='m-4'>
-              <h1>{"Editar ID #" + carta.Id}</h1>
-              <h6  className='mb-3'>Juego: {tableName}</h6>
+        <div className='m-4 text-light'>
+          <Row>
+            <h1>{"Editar ID #" + carta.Id}</h1>
+            <h6 className='mb-3'>Juego: {tableName}</h6>
+          </Row>
+          <Row>
+            <Col xs={6}>
+              <Form.Group className="mb-3">
+                <Form.Label>Imagen</Form.Label><br />
+                <Image src={carta.Imagen} className="imgEdicion mb-3" thumbnail />
+                <Form.Control type="file" />
+              </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control placeholder="Nombre" defaultValue={carta.Nombre} />
               </Form.Group>
               <Form.Group className="mb-3">
+                <Form.Label>Precio</Form.Label>
+                <Form.Control placeholder="Precio" defaultValue={carta.precio} />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group className="mb-3">
                 <Form.Label>Tipo</Form.Label>
                 <Form.Control placeholder="Tipo" defaultValue={carta.Tipo} />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label>Debilidad</Form.Label>
-                <Form.Control placeholder="Debilidad" defaultValue={carta.Debilidad} />
+                <Form.Label>Atributo</Form.Label>
+                <Form.Control placeholder="Atributo" defaultValue={carta.Atributo} />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label>Resistencia</Form.Label>
-                <Form.Control placeholder="Resistencia" defaultValue={carta.Resistencia} />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Precio</Form.Label>
-                <Form.Control placeholder="Precio" defaultValue={carta.precio} />
+                <Form.Label>Tipo de carta</Form.Label>
+                <Form.Control placeholder="Tipo de carta" defaultValue={carta.TipoDeCarta} />
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Ataque</Form.Label>
@@ -92,18 +103,9 @@ function EditarCarta() {
                 <Form.Label>Descripción</Form.Label>
                 <Form.Control placeholder="Descripción" type="textarea" defaultValue={carta.Descripción} />
               </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Disabled select menu</Form.Label>
-                <Form.Select disabled>
-                  <option>Disabled select</option>
-                </Form.Select>
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Check type="checkbox" label="Can't check this" disabled />
-              </Form.Group>
-            </div>
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+        </div>
       </Container>
     </>
   )

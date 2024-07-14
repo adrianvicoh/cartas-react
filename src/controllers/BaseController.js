@@ -78,8 +78,6 @@ class BaseController {
 
         const data = await response.json();
 
-        console.log("bdd",data)
-
         // extraient la Imagen, només agafem la primera
         
             let Imagen = (data.Imagen && data.Imagen[0].signedUrl) ? data.Imagen[0].signedUrl : '';

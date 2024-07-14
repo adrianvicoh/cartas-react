@@ -1,0 +1,35 @@
+// General
+
+Id
+Nombre
+precio
+Imagen
+DEF
+
+// Yu-gi-ho
+
+Tipo
+Atributo
+TipoDeCarta
+ATK
+Descripción
+
+// Pokemon
+
+Tipo
+Debilidad
+Resistencia
+ATK
+Descripción
+
+// Magic
+
+CosteMana
+Tipo
+Poder
+
+// Dragonball
+
+Tipo
+ATK
+Descripción
